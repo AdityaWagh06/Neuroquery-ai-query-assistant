@@ -2,7 +2,7 @@
 
 A comprehensive web application that allows users to interact with databases using natural language queries and voice commands. The system uses NLP (Natural Language Processing) with Scikit-learn to convert human language into SQL queries and provides real-time results through a modern React frontend.
 
-## 🚀 Features
+##  Features
 
 ### Core Functionality
 - **Natural Language Processing**: Convert plain English to SQL queries using Scikit-learn
@@ -24,7 +24,7 @@ A comprehensive web application that allows users to interact with databases usi
 - **SQLite Database**: Sample database with employees, departments, and projects
 - **Cross-platform**: Works on Windows, macOS, and Linux
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 ai-query-assistant/
@@ -53,7 +53,7 @@ ai-query-assistant/
 └── README.md              # This file
 ```
 
-## 🛠️ Prerequisites
+##  Prerequisites
 
 ### Backend Requirements
 - Python 3.8 or higher
@@ -67,7 +67,7 @@ ai-query-assistant/
 - Microphone access (for voice input)
 - Modern web browser with JavaScript enabled
 
-## 📦 Installation
+##  Installation
 
 ### 1. Clone the Repository
 ```bash
@@ -110,7 +110,7 @@ npm install
 yarn install
 ```
 
-## 🚀 Running the Application
+##  Running the Application
 
 ### 1. Start the Backend Server
 
@@ -153,7 +153,7 @@ The frontend will be available at `http://localhost:3000`
 
 4. **Database Schema**: Explore the database structure in the schema viewer
 
-## 📊 Sample Database
+##  Sample Database
 
 The application comes with a pre-populated SQLite database containing:
 
@@ -167,7 +167,7 @@ The application comes with a pre-populated SQLite database containing:
 - 4 projects with different statuses
 - Realistic salary and date ranges
 
-## 🤖 NLP Features
+##  NLP Features
 
 ### Intent Classification
 The system recognizes various query intents:
@@ -190,7 +190,7 @@ Automatically extracts:
 - **Features**: N-gram analysis, stop word removal, lemmatization
 - **Accuracy**: Continuously improved through pattern matching
 
-## 🎤 Voice Recognition
+##  Voice Recognition
 
 ### Supported Features
 - Real-time speech-to-text conversion
@@ -204,7 +204,7 @@ Automatically extracts:
 - Wait for the recording indicator before speaking
 - Click stop when finished speaking
 
-## 🔧 Configuration
+##  Configuration
 
 ### Backend Configuration (.env)
 ```env
@@ -220,7 +220,7 @@ Environment variables can be set in `.env` file in the frontend directory:
 REACT_APP_API_URL=http://localhost:5000
 ```
 
-## 🧪 API Documentation
+##  API Documentation
 
 ### Process Natural Language Query
 ```http
@@ -280,7 +280,7 @@ Response:
 }
 ```
 
-## 🔒 Security Features
+##  Security Features
 
 ### SQL Injection Protection
 - Parameterized queries
@@ -294,7 +294,7 @@ Response:
 - Local data storage only
 - No external API calls for core functionality
 
-## 🎨 Customization
+##  Customization
 
 ### Adding New Intents
 1. Update `intent_patterns` in `nlp_processor.py`
@@ -311,7 +311,7 @@ Response:
 2. Update components in `src/components/`
 3. Customize Bootstrap theme variables
 
-## 🚨 Troubleshooting
+##  Troubleshooting
 
 ### Common Issues
 
@@ -342,7 +342,7 @@ Response:
 - **"SQL Error"**: Query contains invalid syntax or dangerous operations
 - **"No Results"**: Query executed successfully but returned empty result set
 
-## 📈 Performance Optimization
+##  Performance Optimization
 
 ### Backend Optimization
 - Database indexing on frequently queried columns
@@ -356,7 +356,7 @@ Response:
 - Debounced search input
 - Optimized re-rendering
 
-## 🔮 Future Enhancements
+##  Future Enhancements
 
 ### Planned Features
 - **Advanced NLP**: Integration with transformer models
@@ -374,43 +374,6 @@ Response:
 - Mobile application version
 - Cloud deployment options
 - Performance monitoring dashboard
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-### Development Guidelines
-- Follow PEP 8 for Python code
-- Use ESLint and Prettier for JavaScript
-- Add unit tests for new features
-- Update documentation for API changes
-- Test voice features across browsers
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 👥 Support
-
-For support and questions:
-- Create an issue on GitHub
-- Check the troubleshooting section
-- Review the API documentation
-- Test with example queries first
-
-## 🙏 Acknowledgments
-
-- **Scikit-learn** for machine learning capabilities
-- **Flask** for the robust backend framework
-- **React** for the modern frontend experience
-- **Bootstrap** for responsive design components
-- **SpeechRecognition** for voice processing capabilities
-
----
 
 **Happy Querying!** 🎉
 
