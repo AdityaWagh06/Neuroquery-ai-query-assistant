@@ -220,65 +220,6 @@ Environment variables can be set in `.env` file in the frontend directory:
 REACT_APP_API_URL=http://localhost:5000
 ```
 
-##  API Documentation
-
-### Process Natural Language Query
-```http
-POST /api/query
-Content-Type: application/json
-
-{
-  "query": "Show all employees in IT department"
-}
-```
-
-Response:
-```json
-{
-  "success": true,
-  "original_query": "Show all employees in IT department",
-  "sql_query": "SELECT * FROM employees e JOIN departments d ON e.department_id = d.id WHERE UPPER(d.name) = 'IT'",
-  "intent": "select_with_condition",
-  "results": [...],
-  "columns": [...],
-  "row_count": 2
-}
-```
-
-### Process Voice Input
-```http
-POST /api/voice
-Content-Type: multipart/form-data
-
-audio: [audio file]
-```
-
-### Get Database Schema
-```http
-GET /api/schema
-```
-
-Response:
-```json
-{
-  "success": true,
-  "schema": {
-    "tables": [
-      {
-        "name": "employees",
-        "columns": [
-          {
-            "name": "id",
-            "type": "INTEGER",
-            "nullable": false,
-            "primary_key": true
-          }
-        ]
-      }
-    ]
-  }
-}
-```
 
 ##  Security Features
 
@@ -306,75 +247,8 @@ Response:
 2. Modify sample data in `database.py`
 3. Update schema information accordingly
 
-### UI Customization
-1. Modify styles in `src/styles/App.css`
-2. Update components in `src/components/`
-3. Customize Bootstrap theme variables
 
-##  Troubleshooting
 
-### Common Issues
-
-**Backend won't start**
-- Check Python version (3.8+)
-- Verify all dependencies are installed
-- Check port 5000 availability
-
-**Voice recognition not working**
-- Enable microphone permissions
-- Use HTTPS in production
-- Check browser compatibility
-
-**Frontend won't connect to backend**
-- Ensure backend is running on port 5000
-- Check CORS configuration
-- Verify API_BASE_URL setting
-
-**NLP model issues**
-- Delete `models/` directory to retrain
-- Check NLTK data downloads
-- Verify training data format
-
-### Error Messages
-
-- **"API Disconnected"**: Backend server is not running
-- **"Voice Not Supported"**: Browser doesn't support MediaRecorder API
-- **"SQL Error"**: Query contains invalid syntax or dangerous operations
-- **"No Results"**: Query executed successfully but returned empty result set
-
-##  Performance Optimization
-
-### Backend Optimization
-- Database indexing on frequently queried columns
-- Query result caching
-- Connection pooling for production use
-- Async request handling
-
-### Frontend Optimization
-- Component lazy loading
-- Result pagination for large datasets
-- Debounced search input
-- Optimized re-rendering
-
-##  Future Enhancements
-
-### Planned Features
-- **Advanced NLP**: Integration with transformer models
-- **Multi-database Support**: PostgreSQL, MySQL, MongoDB
-- **Query History**: Save and replay previous queries
-- **Export Features**: CSV, JSON, Excel export
-- **User Authentication**: Multi-user support with permissions
-- **Query Visualization**: Charts and graphs for numeric data
-- **Advanced Voice**: Multi-language support
-- **API Keys**: External AI service integration
-
-### Potential Improvements
-- Real-time collaboration features
-- Advanced analytics and reporting
-- Mobile application version
-- Cloud deployment options
-- Performance monitoring dashboard
-
-**Happy Querying!** 🎉
+**Happy Querying!** 
 
 Try starting with simple queries like "Show all employees" and gradually move to more complex requests. The AI will learn and improve its responses over time.
